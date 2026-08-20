@@ -93,3 +93,22 @@ so 8-wide will make two columns and 4-wide will make 4 columns.)
 Semantic will take care of assigning the columns for you. You can also try
 implementing [Semantic Cards](https://semantic-ui.com/views/card.html) for each
 hog.
+
+
+## Completed Implementation
+
+The dashboard is implemented in `src/components/App.jsx` with reusable navigation, hog-card, and add-hog form components. It supports expandable hog details, greased-only filtering, name and weight sorting, hiding cards, adding new hogs, accessible labels, and Semantic UI cards. The UI is responsive and includes an empty-state message when filters hide every hog.
+
+Run the full verification with:
+
+```bash
+npm install
+npm test -- --run
+npm run build
+```
+
+The repository's automated test suite covers initial rendering, detail expansion, filtering, sorting, hiding, adding a hog, and Semantic UI card structure.
+
+## GitHub Pages
+
+The Vite base path is configured for `/react-hogwild-vite/`, so the app can be served from the repository's GitHub Pages project path after a production build.
