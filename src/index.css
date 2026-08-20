@@ -1,152 +1,161 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  background: #fff8f3;
+  color: #3b2520;
+  font-family: Georgia, "Times New Roman", serif;
 }
 
 .App {
-  margin: 0% 5% 0% 5%;
-  text-align: center;
-}
-
-.TwirlyPig {
-  transition: all 3s ease-in-out;
-  display: inline;
-}
-
-.TwirlyPig:hover {
-  transform: scale(1.5);
+  min-height: 100vh;
 }
 
 .navWrapper {
-  margin-bottom: 2%;
-}
-
-.filterWrapper {
-  margin: 2% 0% 2% 0%;
+  padding: 1.25rem 1rem;
+  background: #3b0b0b;
+  color: #fff8f3;
+  text-align: center;
 }
 
 .headerText {
-  color: #F5A9BC;
-  font-size: 3em;
-  margin: 0% 2% 0% 2%;
-}
-
-.largeHeader {
-  font-size: 3.5em;
-  font-weight: bold;
-  color: #3B0B0B;
-}
-
-.smallHeader {
-  font-size: 1.75em;
-  font-weight: bold;
-  color: #3B0B0B;
+  margin-right: 1rem;
+  color: #f5a9bc;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
 }
 
 .normalText {
-  font-family: Georgia, serif;
-  font-size: .75em;
+  font-size: 1rem;
 }
 
-.hoggyText {
-  font-size: 1.5em;
+.TwirlyPig {
+  display: inline-block;
+  vertical-align: middle;
 }
-
-.achievementText {
-  color: purple;
-}
-
-ul {
-  list-style-type: none;
-  list-style: none;
-}
-
-.normalText ul {
-  font-family: Georgia, serif;
-  font-size: .75em;
-  text-align: left;
-}
-
-.subtleText {
-  color: #D1D1D1;
-  font-size: .75em;
-}
-
-
-.indexWrapper {
-  margin: auto;
-}
-
-
-.pigTile {
-  display: inline;
-  background-repeat: no-repeat;
-  background-position: center 90%;
-  float: left;
-  margin: 2%;
-  padding: 1%;
-  outline: #3B0B0B dotted thick;
-  transition: 0.75s;
-  opacity: 1;
-}
-
-.minBackgroundSneak {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  background-size: cover;
-  z-index: -3;
-}
-
-.maxBackgroundSneak {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  background-size: cover;
-  z-index: -3;
-  opacity: 0.75;
-}
-
-.pigTile h3 {
-  color: #FBB;
-}
-
-.minPigTile {
-  width: 250px;
-  height: 250px;
-  background-size: cover;
-}
-
-.maxPigTile {
-  background-size: cover;
-  width: 500px;
-  height: 500px;
-}
-
-.pigTile:hover {
-  transform: scale(1.05);
-}
-
 
 .App-logo {
-  animation: App-logo-spin infinite 5s linear;
-  height: 80px;
-  transition: all .2s ease-in-out;
+  width: 4rem;
+  height: 4rem;
 }
 
-.footer {
-  padding: 1%;
-  clear: both;
+.app-content {
+  padding: 2rem 1rem 4rem;
 }
 
+.intro {
+  margin-bottom: 2rem;
+  text-align: center;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.intro h1 {
+  color: #3b0b0b;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.intro p {
+  margin: 0 auto;
+  max-width: 42rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 1rem 0 2rem;
+  padding: 1rem;
+  background: #fff;
+  border: 1px solid #ead8cf;
+  border-radius: 0.5rem;
+}
+
+.controls label:not(.checkbox label) {
+  margin-left: auto;
+  font-weight: 700;
+}
+
+.controls select {
+  min-width: 10rem;
+}
+
+.hog-grid {
+  width: 100%;
+  margin: 0 !important;
+}
+
+.hog-card {
+  width: 100% !important;
+  overflow: hidden;
+  border-radius: 0.75rem !important;
+}
+
+.hog-card__summary {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: #fff;
+  color: inherit;
+  cursor: pointer;
+  text-align: center;
+}
+
+.hog-card__summary:focus-visible {
+  outline: 3px solid #f5a9bc;
+  outline-offset: -3px;
+}
+
+.hog-card__summary img {
+  display: block;
+  width: 100%;
+  height: 16rem;
+  object-fit: cover;
+}
+
+.hog-card h3 {
+  margin: 0;
+  padding: 1rem;
+  color: #3b0b0b;
+  font-size: 1.4rem;
+}
+
+.hog-card__details {
+  min-height: 8rem;
+  line-height: 1.45;
+}
+
+.hog-card__details p {
+  margin: 0.5rem 0;
+}
+
+.hog-card__actions {
+  text-align: right;
+}
+
+.add-hog-form {
+  margin-top: 2rem !important;
+  padding: 1.5rem;
+  background: #fff;
+  border: 1px solid #ead8cf;
+  border-radius: 0.5rem;
+}
+
+.add-hog-form h2 {
+  margin-top: 0;
+  color: #3b0b0b;
+}
+
+.empty-state {
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .controls label:not(.checkbox label) {
+    margin-left: 0;
   }
 
-  to {
-    transform: rotate(360deg);
+  .ui.grid > .eight.wide.column {
+    width: 100% !important;
   }
 }
